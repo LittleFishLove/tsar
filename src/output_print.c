@@ -137,8 +137,11 @@ printf_result(double result)
 
     if ((1000 - result) > 0.1) {
         printf("%6.2f", result);
+        
     } else if ( (1000 - result / 1024) > 0.1) {
-        printf("%5.1f%s", result / 1024, "K");
+        //printf("%5.1f%s", result / 1024, "K");
+        printf("%d",result);                  /*HERE IS CHANGE!*/
+        
     } else if ((1000 - result / 1024 / 1024) > 0.1) {
         printf("%5.1f%s", result / 1024 / 1024, "M");
     } else if ((1000 - result / 1024 / 1024 / 1024) > 0.1) {
